@@ -1,1 +1,490 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Russo One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Russo One'), local('RussoOne-Regular'), url(https://fonts.gstatic.com/s/russoone/v8/Z9XUDmZRWg6M1LvRYsHOz8mM.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Russo One', sans-serif;
+  background-color: #F6FCFF;
+}
+body {
+  padding: 0 10%;
+  color: #26325E;
+}
+@media (max-width: 500px) {
+  body {
+    padding: 0;
+  }
+}
+body nav {
+  background-color: white;
+  color: #26325E;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2vh 0;
+}
+body nav .nav-logo {
+  font-size: 1.8rem;
+}
+body nav .nav-links {
+  width: 60%;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (max-width: 980px) {
+  body nav .nav-logo {
+    font-size: 1.4rem;
+  }
+}
+  @media (max-width: 768px) {
+    body nav .nav-logo {
+      display: none;
+    }
+    body nav .nav-links{
+      width:100%;
+    }
+    body header .profile-img {
+      display: none;
+    }
+    body header .titles {
+      width: 100%;
+    }
+    
+  }
+
+}
+@media (max-width: 500px) {
+  body nav .nav-links {
+    width: 100%;
+  }
+}
+body nav a {
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  body nav .nav-logo {
+    display: none;
+  }
+}
+body header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: #26325E;
+  color: white;
+  height: 70vh;
+}
+body header img {
+  border-radius: 110%;
+  width: 60%;
+}
+body header h1 {
+  font-size: 4.8rem;
+  margin-bottom: 2vh;
+}
+body header h2 {
+  font-size: 2.8rem;
+}
+body header .profile-img {
+  width: 50%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  body header .profile-img {
+    display: none;
+  }
+}
+body header .titles {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  body header .titles {
+    width: 100%;
+    text-align: center;
+  }
+}
+body header .title-contact {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+  color: #26325E;
+  width: 60%;
+  border-radius: 2.5rem;
+  padding: 2vh;
+  margin-top: 2vh;
+  font-size: 1.4rem;
+}
+body header .title-contact button {
+  width: 40%;
+  height: 3rem;
+  border-radius: 2rem;
+  color: #26325E;
+  background-color: #FFCC8F;
+  margin-top: 2rem;
+  box-shadow: none;
+  border: none;
+}
+body header .title-contact button:hover {
+  background-color: rgba(253, 155, 43, 0.993);
+}
+@media (max-width: 500px) {
+  body header .title-contact {
+    width: 100%;
+  }
+}
+body .skills-edu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 7%;
+  flex-wrap: wrap;
+}
+@media (max-width: 500px) {
+  body .skills-edu-container {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+body .skills:hover,
+body .education:hover {
+  transform: scale(1.05);
+  border: 1px solid #b1dcff;
+}
+body .skills {
+  background-color: white;
+  justify-content: column;
+  width: 40%;
+  margin: 4vh 0;
+  height: 60vh;
+  border-radius: 10%;
+  padding: 5vh 3%;
+  -webkit-box-shadow: 0px 30px 56px -47px #00115e;
+  -moz-box-shadow: 0px 30px 56px -47px #00115e;
+  box-shadow: 0px 30px 56px -47px #00115e;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+body .skills h2 {
+  font-size: 3rem;
+  width: 100%;
+}
+body .skills ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .skills li {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem 0;
+}
+body .skills div {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem;
+}
+@media (max-width: 500px) {
+  body .skills {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+body .education {
+  background-color: white;
+  justify-content: column;
+  align-items: center;
+  width: 40%;
+  margin: 4vh 0;
+  height: 60vh;
+  border-radius: 10%;
+  padding: 5vh 3%;
+  -webkit-box-shadow: 0px 30px 56px -47px #00115e;
+  -moz-box-shadow: 0px 30px 56px -47px #00115e;
+  box-shadow: 0px 30px 56px -47px #00115e;
+}
+body .education h2 {
+  font-size: 3rem;
+  width: 100%;
+}
+body .education ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .education li {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem 0;
+}
+body .education div {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem;
+}
+@media (max-width: 500px) {
+  body .education {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+body #table section {
+  width: 100%;
+  padding: 0 7%;
+  flex-wrap: wrap;
+}
+body .work-history {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: column;
+  align-items: center;
+  width: 40%;
+  margin: 4vh 0;
+  height: 60vh;
+  border-radius: 10%;
+  padding: 5vh 3%;
+  -webkit-box-shadow: 0px 30px 56px -47px #00115e;
+  -moz-box-shadow: 0px 30px 56px -47px #00115e;
+  box-shadow: 0px 30px 56px -47px #00115e;
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 3rem;
+}
+body .work-history h2 {
+  font-size: 3rem;
+  width: 100%;
+}
+body .work-history ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .work-history li {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem 0;
+}
+body .work-history div {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem;
+}
+@media (max-width: 500px) {
+  body .work-history {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 500px) {
+  body .work-history {
+    font-size: 1.2rem;
+  }
+}
+body .work-history table {
+  width: 100%;
+}
+body tr {
+  font-size: 1.6rem;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  body tr {
+    font-size: 1.2rem;
+  }
+}
+body td {
+  width: 50%;
+}
+body tr:nth-child(even) {
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem;
+}
+body footer {
+  text-align: center;
+}
