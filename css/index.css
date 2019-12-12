@@ -175,6 +175,28 @@ body nav .nav-links {
   flex-wrap: wrap;
   align-items: center;
 }
+@media (max-width: 980px) {
+  body nav .nav-logo {
+    font-size: 1.4rem;
+  }
+}
+  @media (max-width: 768px) {
+    body nav .nav-logo {
+      display: none;
+    }
+    body nav .nav-links{
+      width:100%;
+    }
+    body header .profile-img {
+      display: none;
+    }
+    body header .titles {
+      width: 100%;
+    }
+    
+  }
+
+}
 @media (max-width: 500px) {
   body nav .nav-links {
     width: 100%;
