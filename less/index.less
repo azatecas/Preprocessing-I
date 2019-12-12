@@ -65,12 +65,18 @@ html, body {
 body {
 	padding: 0 10%;
 	color: @main-color;
-}
+
+	@media (max-width: 500px) {
+		padding: 0;
+	}
+
 
 
 // Variables for Color
 @main-color: #26325E;
 @button-color: #FFCC8F;
+
+
 
 //mixins
 .flex(){
@@ -90,6 +96,21 @@ nav{
 
 	.nav-logo {
 		font-size: 1.8rem;
+
+		@media (max-width: 1000px){
+		font-size: 1.4rem;
+		
+			
+			
+		}
+
+		@media (max-width: 500px){
+		
+			
+				display: none;
+			}
+
+		
 	} //end of nav-logo
 
 
@@ -98,15 +119,24 @@ nav{
 		width: 60%;
 		font-size: 1.2rem;
 		.flex();
+
+		@media (max-width: 500px) {
+			width:100%;
+		}
 	}//end of nav-links
 	
 
 	a {
-		text-decoration: none;	
+		text-decoration: none;
+
 
 	} //end of a 
 	
+	
+		
+		
 
+	}
 } // end of nav
 
 header{
@@ -135,9 +165,19 @@ header{
 		width: 50%;
 		// border: 1px solid green;
 		text-align: center;
+
+		@media (max-width: 500px) {
+			display: none;
+		}
 	}
 	.titles{
 		width:50%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			text-align: center;
+			
+		}
 	}
 	.title-contact{
 		.flex();
@@ -148,8 +188,8 @@ header{
 		padding: 2vh;
 		margin-top: 2vh;
 		font-size: 1.4rem;
-		height: 15rem;
-		text-align: justify;
+		// height: 15rem;
+		// text-align: justify;
 
 
 		button{
@@ -158,7 +198,29 @@ header{
 			border-radius: 2rem;
 			color: @main-color;
 			background-color: @button-color;
+			margin-top: 2rem;
+			box-shadow: none;
+			border: none;
+
+			
+			
 		}
+		button:hover{
+			background-color:rgba(253, 155, 43, 0.993);
+					
+
+		}
+		
+
+
+
+
+		@media (max-width: 500px) {
+			
+			width: 100%;
+		}
+
+		
 	}
 		
 	
@@ -168,35 +230,38 @@ header{
 .skills-edu-container {
 	.flex();
 	
+	width: 100%;
+	padding: 0 7%;
+	flex-wrap: wrap;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+		width: 100%;
+		
+	}
+	
 }
 
 .card(){
 	
 	background-color: white;
+	justify-content: column;
+	align-items: center;
 	
-	width: 30%;
-	margin: 2vh 0;
-	height: 50vh;
+	width: 40%;
+	margin: 4vh 0;
+	height: 60vh;
 	border-radius: 10%;
 	padding: 5vh 3%;
 
 	-webkit-box-shadow: 0px 30px 56px -47px rgba(0,17,94,1);
 	-moz-box-shadow: 0px 30px 56px -47px rgba(0,17,94,1);
 	box-shadow: 0px 30px 56px -47px rgba(0,17,94,1);
-}
-.skills:hover{
-	transform: scale(1.02);}
 
-
-.skills {
-	.card();
-	.flex();
-	justify-content: column;
-	align-items: center;
 	h2 {
 		font-size: 3rem;
 		width: 100%;
-	}//end h2
+	}
 	ul {
 		width: 100%;
 		.flex();
@@ -209,17 +274,104 @@ header{
 		background-color: @button-color;
 		border-radius: 2rem;
 		text-align: center;
-		height: 3.5rem;
+		// height: 3.5rem;
+		width: 100%;
+		margin: 1vh 0;
+		padding: 1rem 0;
+		
+	}
+	div {
+		font-size: 1.4rem;
+		background-color: @button-color;
+		border-radius: 2rem;
+		
 		width: 100%;
 		margin: 1vh 0;
 		padding: 1rem;
-		
 	}
 
+	@media (max-width: 500px) {
+		
+		width: 100%;
+		font-size:1.2rem;
+		}
+
+
+} //end of card()
+
+
+
+.skills:hover,.education:hover{
+	transform: scale(1.05);
+	border: 1px solid rgb(177, 220, 255);
+
+}
+
+
+.skills {
+	.card();
+	.flex();	
 }
 
 .education {
+	.card();	
+}
+
+#table section{
+	width: 100%;
+	padding: 0 7%;
+	flex-wrap: wrap;
+
+
+}
+
+.work-history{
+	.flex();
 	.card();
+	width: 100%;
+	font-size: 2rem;
+	border-radius: 3rem;
+
+	@media (max-width: 500px) {
+		font-size:1.2rem;
+	}
 }
 
 
+.work-history table{
+	width:100%;
+}
+
+
+
+tr{
+	// height: 5vh;
+	font-size: 1.6rem;
+	width: 100%;
+
+	@media (max-width: 500px) {
+		font-size:1.2rem;
+		
+	}
+
+	
+}
+td{
+	width: 50%;
+}
+
+tr:nth-child(even) {
+	
+	background-color: @button-color;
+	border-radius: 2rem;
+	
+	width: 100%;
+	margin: 1vh 0;
+	padding: 1rem;
+}
+
+footer{
+	text-align: center;
+}
+
+}

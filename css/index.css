@@ -148,7 +148,12 @@ body {
   padding: 0 10%;
   color: #26325E;
 }
-nav {
+@media (max-width: 500px) {
+  body {
+    padding: 0;
+  }
+}
+body nav {
   background-color: white;
   color: #26325E;
   display: flex;
@@ -159,10 +164,10 @@ nav {
   width: 100%;
   padding: 2vh 0;
 }
-nav .nav-logo {
+body nav .nav-logo {
   font-size: 1.8rem;
 }
-nav .nav-links {
+body nav .nav-links {
   width: 60%;
   font-size: 1.2rem;
   display: flex;
@@ -170,10 +175,20 @@ nav .nav-links {
   flex-wrap: wrap;
   align-items: center;
 }
-nav a {
+@media (max-width: 500px) {
+  body nav .nav-links {
+    width: 100%;
+  }
+}
+body nav a {
   text-decoration: none;
 }
-header {
+@media (max-width: 500px) {
+  body nav .nav-logo {
+    display: none;
+  }
+}
+body header {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -184,25 +199,36 @@ header {
   color: white;
   height: 70vh;
 }
-header img {
+body header img {
   border-radius: 110%;
   width: 60%;
 }
-header h1 {
+body header h1 {
   font-size: 4.8rem;
   margin-bottom: 2vh;
 }
-header h2 {
+body header h2 {
   font-size: 2.8rem;
 }
-header .profile-img {
+body header .profile-img {
   width: 50%;
   text-align: center;
 }
-header .titles {
+@media (max-width: 500px) {
+  body header .profile-img {
+    display: none;
+  }
+}
+body header .titles {
   width: 50%;
 }
-header .title-contact {
+@media (max-width: 500px) {
+  body header .titles {
+    width: 100%;
+    text-align: center;
+  }
+}
+body header .title-contact {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -214,30 +240,50 @@ header .title-contact {
   padding: 2vh;
   margin-top: 2vh;
   font-size: 1.4rem;
-  height: 15rem;
-  text-align: justify;
 }
-header .title-contact button {
+body header .title-contact button {
   width: 40%;
   height: 3rem;
   border-radius: 2rem;
   color: #26325E;
   background-color: #FFCC8F;
+  margin-top: 2rem;
+  box-shadow: none;
+  border: none;
 }
-.skills-edu-container {
+body header .title-contact button:hover {
+  background-color: rgba(253, 155, 43, 0.993);
+}
+@media (max-width: 500px) {
+  body header .title-contact {
+    width: 100%;
+  }
+}
+body .skills-edu-container {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   align-items: center;
+  width: 100%;
+  padding: 0 7%;
+  flex-wrap: wrap;
 }
-.skills:hover {
-  transform: scale(1.02);
+@media (max-width: 500px) {
+  body .skills-edu-container {
+    flex-direction: column;
+    width: 100%;
+  }
 }
-.skills {
+body .skills:hover,
+body .education:hover {
+  transform: scale(1.05);
+  border: 1px solid #b1dcff;
+}
+body .skills {
   background-color: white;
-  width: 30%;
-  margin: 2vh 0;
-  height: 50vh;
+  justify-content: column;
+  width: 40%;
+  margin: 4vh 0;
+  height: 60vh;
   border-radius: 10%;
   padding: 5vh 3%;
   -webkit-box-shadow: 0px 30px 56px -47px #00115e;
@@ -246,14 +292,13 @@ header .title-contact button {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: column;
   align-items: center;
 }
-.skills h2 {
+body .skills h2 {
   font-size: 3rem;
   width: 100%;
 }
-.skills ul {
+body .skills ul {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -261,24 +306,163 @@ header .title-contact button {
   align-items: center;
   justify-content: space-around;
 }
-.skills li {
+body .skills li {
   font-size: 1.4rem;
   background-color: #FFCC8F;
   border-radius: 2rem;
   text-align: center;
-  height: 3.5rem;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem 0;
+}
+body .skills div {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
   width: 100%;
   margin: 1vh 0;
   padding: 1rem;
 }
-.education {
+@media (max-width: 500px) {
+  body .skills {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+body .education {
   background-color: white;
-  width: 30%;
-  margin: 2vh 0;
-  height: 50vh;
+  justify-content: column;
+  align-items: center;
+  width: 40%;
+  margin: 4vh 0;
+  height: 60vh;
   border-radius: 10%;
   padding: 5vh 3%;
   -webkit-box-shadow: 0px 30px 56px -47px #00115e;
   -moz-box-shadow: 0px 30px 56px -47px #00115e;
   box-shadow: 0px 30px 56px -47px #00115e;
+}
+body .education h2 {
+  font-size: 3rem;
+  width: 100%;
+}
+body .education ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .education li {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem 0;
+}
+body .education div {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem;
+}
+@media (max-width: 500px) {
+  body .education {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+body #table section {
+  width: 100%;
+  padding: 0 7%;
+  flex-wrap: wrap;
+}
+body .work-history {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: column;
+  align-items: center;
+  width: 40%;
+  margin: 4vh 0;
+  height: 60vh;
+  border-radius: 10%;
+  padding: 5vh 3%;
+  -webkit-box-shadow: 0px 30px 56px -47px #00115e;
+  -moz-box-shadow: 0px 30px 56px -47px #00115e;
+  box-shadow: 0px 30px 56px -47px #00115e;
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 3rem;
+}
+body .work-history h2 {
+  font-size: 3rem;
+  width: 100%;
+}
+body .work-history ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .work-history li {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem 0;
+}
+body .work-history div {
+  font-size: 1.4rem;
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem;
+}
+@media (max-width: 500px) {
+  body .work-history {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 500px) {
+  body .work-history {
+    font-size: 1.2rem;
+  }
+}
+body .work-history table {
+  width: 100%;
+}
+body tr {
+  font-size: 1.6rem;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  body tr {
+    font-size: 1.2rem;
+  }
+}
+body td {
+  width: 50%;
+}
+body tr:nth-child(even) {
+  background-color: #FFCC8F;
+  border-radius: 2rem;
+  width: 100%;
+  margin: 1vh 0;
+  padding: 1rem;
+}
+body footer {
+  text-align: center;
 }
